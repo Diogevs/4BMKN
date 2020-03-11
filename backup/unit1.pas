@@ -164,7 +164,8 @@ end;
 
 procedure TForm1.Font(Sender: TObject);
 begin
-
+   Form1.Visible:=false;
+   Form2.ShowModal;;
 end;
 
 procedure TForm1.Theme(Sender: TObject);
@@ -196,6 +197,7 @@ end;
 
 procedure TForm1.Help1(Sender: TObject);
 begin
+   //не работает
    Application.HelpFile := ExtractFilePath(Application.ExeName) + 'Spravka.chm';
 end;
 

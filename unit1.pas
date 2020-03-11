@@ -76,7 +76,7 @@ var
   Form1: TForm1;
 
 implementation
-
+uses u_f2;
 {$R *.lfm}
 
 { TForm1 }
@@ -164,7 +164,7 @@ end;
 
 procedure TForm1.Font(Sender: TObject);
 begin
-
+   u_f2.Form2.Show;
 end;
 
 procedure TForm1.Theme(Sender: TObject);
