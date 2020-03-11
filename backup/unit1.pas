@@ -1,4 +1,4 @@
-﻿unit Unit1;
+unit Unit1;
 {$mode objfpc}{$H+}
 
 interface
@@ -196,7 +196,7 @@ end;
 
 procedure TForm1.Help1(Sender: TObject);
 begin
-
+   Application.HelpFile := ExtractFilePath(Application.ExeName) + 'Spravka.chm';
 end;
 
 procedure TForm1.About(Sender: TObject);
