@@ -1,18 +1,19 @@
 object Form1: TForm1
-  Left = 934
+  Left = 828
   Height = 776
-  Top = 151
+  Top = 149
   Width = 783
   Caption = 'Текстовый редактор'
-  ClientHeight = 750
+  ClientHeight = 751
   ClientWidth = 783
   DesignTimePPI = 120
   Menu = MainMenu1
-  LCLVersion = '2.0.0.4'
+  OnCreate = FormCreate
+  LCLVersion = '2.0.6.0'
   object Memo1: TMemo
     Left = 16
     Height = 544
-    Top = 112
+    Top = 128
     Width = 755
     Lines.Strings = (
       'Memo1'
@@ -25,6 +26,7 @@ object Form1: TForm1
     top = 24
     object MenuItem1: TMenuItem
       Caption = 'Файл'
+      OnClick = Fille
       object MenuItem6: TMenuItem
         Caption = 'Новый'
         OnClick = New
@@ -35,16 +37,17 @@ object Form1: TForm1
       end
       object MenuItem8: TMenuItem
         Caption = 'Закрыть'
+        OnClick = Closse
       end
       object MenuItem9: TMenuItem
         Caption = 'Сохранить'
-        OnClick = Saveas
+        OnClick = Save
       end
-      object MenuItem10: TMenuItem
+      object MenuItem4: TMenuItem
         Caption = 'Сохранить как'
         OnClick = Saveas
       end
-      object MenuItem4: TMenuItem
+      object MenuItem10: TMenuItem
         Caption = 'Выход'
         OnClick = Exit
       end
@@ -71,6 +74,7 @@ object Form1: TForm1
     end
     object MenuItem3: TMenuItem
       Caption = 'Вид'
+      OnClick = Mode
       object MenuItem15: TMenuItem
         Caption = 'Шрифт'
         OnClick = Font
@@ -97,7 +101,7 @@ object Form1: TForm1
       OnClick = Help
       object MenuItem17: TMenuItem
         Caption = 'Справка'
-        OnClick = MenuItem17Click
+        OnClick = Help1
       end
       object MenuItem18: TMenuItem
         Caption = 'О программе'

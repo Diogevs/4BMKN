@@ -1,12 +1,11 @@
-unit Unit1;
-
+﻿unit Unit1;
 {$mode objfpc}{$H+}
 
 interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ActnList,
-  Menus, Buttons;
+  Menus, Buttons, ExtCtrls;
 
 type
 
@@ -39,27 +38,29 @@ type
     MenuItem7: TMenuItem;
     MenuItem8: TMenuItem;
     MenuItem9: TMenuItem;
+    procedure FormCreate(Sender: TObject);
     procedure Memo1Change(Sender: TObject);
     procedure Fille(Sender: TObject);
     procedure Font(Sender: TObject);
     procedure Day(Sender: TObject);
     procedure Brand(Sender: TObject);
     procedure Help(Sender: TObject);
-    procedure MenuItem17Click(Sender: TObject);
+    procedure Exit(Sender: TObject);
     procedure About(Sender: TObject);
     procedure language(Sender: TObject);
+    procedure Help1(Sender: TObject);
+    procedure Mode(Sender: TObject);
+    procedure Saveas(Sender: TObject);
     procedure Night(Sender: TObject);
     procedure Theme(Sender: TObject);
-    procedure Type1(Sender: TObject);
     procedure SelectAll(Sender: TObject);
     procedure Cut(Sender: TObject);
     procedure Copy(Sender: TObject);
     procedure Paste(Sender: TObject);
     procedure Edit(Sender: TObject);
-    procedure Saveas(Sender: TObject);
+    procedure Save(Sender: TObject);
     procedure Russian(Sender: TObject);
     procedure English(Sender: TObject);
-    procedure Exit(Sender: TObject);
     procedure New(Sender: TObject);
     procedure Open(Sender: TObject);
     procedure Closse(Sender: TObject);
@@ -80,37 +81,8 @@ implementation
 
 { TForm1 }
 
-procedure TForm1.Fille(Sender: TObject);
-begin
 
-end;
-
-procedure TForm1.SelectAll(Sender: TObject);
-begin
-
-end;
-
-procedure TForm1.Cut(Sender: TObject);
-begin
-
-end;
-
-procedure TForm1.Copy(Sender: TObject);
-begin
-
-end;
-
-procedure TForm1.Paste(Sender: TObject);
-begin
-
-end;
-
-procedure TForm1.Edit(Sender: TObject);
-begin
-
-end;
-
-procedure TForm1.Saveas(Sender: TObject);
+procedure TForm1.FormCreate(Sender: TObject);
 begin
 
 end;
@@ -120,72 +92,8 @@ begin
 
 end;
 
-
-procedure TForm1.Font(Sender: TObject);
-begin
-
-end;
-
-procedure TForm1.Day(Sender: TObject);
-begin
-
-end;
-
-procedure TForm1.Brand(Sender: TObject);
-begin
-
-end;
-
-procedure TForm1.Help(Sender: TObject);
-begin
-
-end;
-
-procedure TForm1.MenuItem17Click(Sender: TObject);
-begin
-
-end;
-
-procedure TForm1.About(Sender: TObject);
-begin
-
-end;
-
-procedure TForm1.language(Sender: TObject);
-begin
-
-end;
-
-procedure TForm1.Night(Sender: TObject);
-begin
-
-end;
-
-procedure TForm1.Theme(Sender: TObject);
-begin
-
-end;
-
-procedure TForm1.Type1(Sender: TObject);
-begin
-
-end;
-
-
-
-//смена на Русский
-procedure TForm1.Russian(Sender: TObject);
-begin
- // SetDefaultLang('ru', LangDirectory);
-end;
-
-//смена на Английский
-procedure TForm1.English(Sender: TObject);
-begin
-// SetDefaultLang('en', LangDirectory);
-end;
-
-procedure TForm1.Exit(Sender: TObject);
+ //Файл
+procedure TForm1.Fille(Sender: TObject);
 begin
 
 end;
@@ -202,8 +110,118 @@ end;
 
 procedure TForm1.Closse(Sender: TObject);
 begin
-  Form1.CloseQuery;
+  Close;
 end;
+
+procedure TForm1.Save(Sender: TObject);
+begin
+
+end;
+
+procedure TForm1.Saveas(Sender: TObject);
+begin
+
+end;
+
+procedure TForm1.Exit(Sender: TObject);
+begin
+  Close;
+end;
+
+
+//Правка
+procedure TForm1.Edit(Sender: TObject);
+begin
+
+end;
+
+procedure TForm1.SelectAll(Sender: TObject);
+begin
+ Memo1.SelectAll;
+end;
+
+procedure TForm1.Cut(Sender: TObject);
+begin
+ Memo1.CutToClipboard;
+end;
+
+procedure TForm1.Copy(Sender: TObject);
+begin
+  Memo1.CopyToClipboard;
+end;
+
+procedure TForm1.Paste(Sender: TObject);
+begin
+   Memo1.PasteFromClipboard;
+end;
+
+
+//Вид
+procedure TForm1.Mode(Sender: TObject);
+begin
+
+end;
+
+procedure TForm1.Font(Sender: TObject);
+begin
+
+end;
+
+procedure TForm1.Theme(Sender: TObject);
+begin
+
+end;
+
+procedure TForm1.Day(Sender: TObject);
+begin
+
+end;
+
+procedure TForm1.Night(Sender: TObject);
+begin
+
+end;
+
+procedure TForm1.Brand(Sender: TObject);
+begin
+
+end;
+
+
+//Справка
+procedure TForm1.Help(Sender: TObject);
+begin
+
+end;
+
+procedure TForm1.Help1(Sender: TObject);
+begin
+
+end;
+
+procedure TForm1.About(Sender: TObject);
+begin
+
+end;
+
+//Язык
+procedure TForm1.language(Sender: TObject);
+begin
+
+end;
+
+//смена на Русский
+procedure TForm1.Russian(Sender: TObject);
+begin
+ // SetDefaultLang('ru', LangDirectory);
+end;
+
+//смена на Английский
+procedure TForm1.English(Sender: TObject);
+begin
+// SetDefaultLang('en', LangDirectory);
+end;
+
 
 
 end.
